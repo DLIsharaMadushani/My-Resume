@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,4 +8,5 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'Resume-V2';
+  @Input() colorBlock = 'purple';
 }

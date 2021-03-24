@@ -1,0 +1,31 @@
+<div class="row timeline-node">
+  <div *ngIf="!rightAligned" class="col-3 icon">
+    <i *ngIf="isCourse" class="material-icons icon">school</i>
+    <i *ngIf="isCertification" class="material-icons icon">emoji_events</i>
+    <i *ngIf="isWork" class="material-icons icon">work</i>
+    <i *ngIf="isHonor" class="material-icons icon">stars</i>
+  </div>
+  <div *ngIf="!rightAligned"  class="col-9 node-details">
+    <div class="row row-cols-1">
+      <div *ngIf="duration != null" class="col-12 subject">{{subject}}</div>
+      <div *ngIf="duration != null" class="col-12 institute"><i class="material-icons company">business</i>&nbsp;{{institute}}</div>
+      <div *ngIf="duration != null" class="col-12 duration">{{duration}}</div>
+      <div *ngIf="description != null" class="col-12 description">{{description}}</div>
+    </div>
+  </div>
+  <div *ngIf="rightAligned"  class="col-9 node-details">
+    <div class="row row-cols-1">
+      <div *ngIf="duration != null" class="col-12 subject">{{subject}}</div>
+      <div *ngIf="duration != null" class="col-12 institute"><i class="material-icons company">business</i>&nbsp;{{institute}}</div>
+      <div *ngIf="duration != null" class="col-12 duration">{{duration}}</div>
+      <div *ngIf="description != null" class="col-12 description">{{description}}</div>
+    </div>
+  </div>
+  <div *ngIf="rightAligned" class="col-3 icon">
+    <i *ngIf="isCourse" class="material-icons icon">school</i>
+    <i *ngIf="isCertification" class="material-icons icon">emoji_events</i>
+    <i *ngIf="isWork" class="material-icons icon">work</i>
+    <i *ngIf="isHonor" class="material-icons icon">stars</i>
+  </div>
+
+</div>

@@ -1,0 +1,67 @@
+<section id="education">
+  <app-title [title]="title"></app-title>
+  <div class="section-content">
+    <div class="container-fluid section-content">
+      <div class="row row-cols-2">
+        <div class="col-6 timeline-node right-line">
+          <app-timeline-date  date="2016 Oct"></app-timeline-date>
+          <div class="expand-node">
+            <app-timeline-node
+              [rightAligned]="true"
+              [isCourse]="true"
+              subject="Higher National Diploma Engineering - Electronics & Telecommunication Engineering"
+              duration=" 31/2 years" institute="Advanced Technological Institute, Galle, Sri Lanka"
+              description="Studied JavaSE "></app-timeline-node>
+          </div>
+          <app-timeline-date date="2013 Feb"></app-timeline-date>
+        </div>
+        <div class="col-6">
+          <div class="row row-cols-1">
+            <div class="col-12 timeline-node left-line">
+              <app-timeline-date [rightAligned]="false" date="2016 Jul"></app-timeline-date>
+              <app-timeline-node
+                [isCourse]="true"
+                subject="CCNP SWITCH (300-115)"
+                duration=" 3 months" institute="Vibernets Solutions (Pvt) Ltd."
+                description="Studied CCNP SWITCH (300-115) examination course content along with the
+practical sessions"></app-timeline-node>
+              <app-timeline-date [rightAligned]="false" date="2016 Apr"></app-timeline-date>
+            </div>
+
+          </div>
+          <div class="row row-cols-1">
+            <div class="col-12 timeline-node left-line">
+              <app-timeline-date [rightAligned]="false" date="2016 Mar"></app-timeline-date>
+              <app-timeline-node
+                [isCourse]="true"
+                subject="CCNP 200-120"
+                duration=" 3 months" institute="Vibernets Solutions (Pvt) Ltd."
+                description="Studied CCNA 200-120 examination course content along with the practical2015 Dec sessions">
+              </app-timeline-node>
+              <app-timeline-date [rightAligned]="false" date="2015 Dec"></app-timeline-date>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2">
+        <div class="col-6 timeline-node right-line">
+          <app-timeline-date date="2012 Sep"></app-timeline-date>
+          <app-timeline-node
+            [rightAligned]="true"
+            [isCourse]="true"
+            subject="Comprehensive Master Java Developer (CMJD), Associate Java Developer (AJD)"
+            duration=" 1 year" institute="Institute of Java Software Engineering (IJSE)"
+            description="Studied JavaSE "></app-timeline-node>
+          <app-timeline-date date="2011 Sep"></app-timeline-date>
+        </div>
+        <div class="col-6 timeline-node left-line">
+          <app-timeline-date [rightAligned]="false" date="2012 Apr"></app-timeline-date>
+          <app-timeline-node
+            [isCertification]="true"
+            subject="Oracle Certified Professional, Java SE 6 Programmer"
+            institute="Oracle"></app-timeline-node>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

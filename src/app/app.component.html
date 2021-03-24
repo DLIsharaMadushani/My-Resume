@@ -1,7 +1,19 @@
 <div>
   <app-header></app-header>
-  <main data-spy="scroll" data-target="#navbar" data-offset="0" tabindex="0">
+  <main >
     <app-home></app-home>
+    <app-aboutme></app-aboutme>
+    <app-divider [clockwise]="true" ></app-divider>
+    <app-education></app-education>
+    <app-divider [clockwise]="false"></app-divider>
+    <app-experiences></app-experiences>
+    <app-divider [clockwise]="true" ></app-divider>
+    <app-skills></app-skills>
+    <app-divider [clockwise]="false"></app-divider>
+    <app-portfolio></app-portfolio>
+    <app-divider [clockwise]="true" ></app-divider>
+    <app-contact></app-contact>
+    <app-divider [clockwise]="false"></app-divider>
   </main>
   <app-footer></app-footer>
 </div>
