@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.sass']
 })
 export class EducationComponent implements OnInit {
-  title = 'Education';
+  title = 'Education & Certifications';
 
   constructor() { }
 

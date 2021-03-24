@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiences.component.sass']
 })
 export class ExperiencesComponent implements OnInit {
-  title = 'Experiences';
+  title = 'Professional Experiences';
 
   constructor() { }
 
