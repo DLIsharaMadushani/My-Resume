@@ -10,3 +10,10 @@ export class AppComponent {
   title = 'Resume-V2';
   @Input() colorBlock = 'purple';
 }
+
+export enum ProjectType{
+  Website,
+  WebApplication,
+  DesktopApplication,
+  MobileApplication
+}

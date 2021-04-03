@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectType} from '../../app.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   title = 'Portfolio';
+  projectType: ProjectType;
 
   constructor() { }
 

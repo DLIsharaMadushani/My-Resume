@@ -28,6 +28,7 @@ import { DividerComponent } from './sections/divider/divider.component';
 import { InterestComponent } from './sections/interest/interest.component';
 import {HttpClientModule} from '@angular/common/http';
 import { RewardsComponent } from './sections/rewards/rewards.component';
+import { WorkComponent } from './sections/work/work.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { RewardsComponent } from './sections/rewards/rewards.component';
     TitleComponent,
     DividerComponent,
     InterestComponent,
-    RewardsComponent
+    RewardsComponent,
+    WorkComponent
   ],
     imports: [
         BrowserModule,

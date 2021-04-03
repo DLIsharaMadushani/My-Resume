@@ -2,3 +2,76 @@
 
 section
   background-color: $block_color
+
+.carousel-container
+  height: 100%
+  margin: 0
+  display: grid
+  grid-template-rows: 60vh 5vh
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr
+  align-items: center
+  justify-items: center
+
+
+.carousels
+  grid-row: 1/2
+  grid-column: 1/8
+  width: 100vw
+  height: 70vh
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  transform-style: preserve-3d
+  perspective: 600px
+  --items: 5
+  --middle: 3
+  --position: 1
+  pointer-events: none
+
+
+div.item
+  position: absolute
+  width: 400px
+  height: 50vh
+  background-color: coral
+  --r: calc(var(--position) - var(--offset))
+  --abs: max(calc(var(--r) * -1), var(--r))
+  transition: all 0.25s linear
+  transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)))
+  z-index: calc((var(--position) - var(--abs)))
+
+div.item:nth-of-type(1)
+  --offset: 1
+  background-color: #E0E0E0
+
+div.item:nth-of-type(2)
+  --offset: 2
+  background-color: #D8DCE9
+
+div.item:nth-of-type(3)
+  --offset: 3
+  background-color: #E0E0E0
+
+
+input:nth-of-type(1)
+  grid-column: 2/3
+  grid-row: 2/3
+
+input:nth-of-type(1):checked ~ .carousels
+  --position: 1
+
+input:nth-of-type(2)
+  grid-column: 3 / 4
+  grid-row: 2 / 3
+
+input:nth-of-type(2):checked ~ div#carousel
+  --position: 2
+
+input:nth-of-type(3)
+  grid-column: 4 /5
+  grid-row: 2 / 3
+
+input:nth-of-type(3):checked ~ div#carousel
+  --position: 3
+
