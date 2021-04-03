@@ -27,6 +27,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { DividerComponent } from './sections/divider/divider.component';
 import { InterestComponent } from './sections/interest/interest.component';
 import {HttpClientModule} from '@angular/common/http';
+import { RewardsComponent } from './sections/rewards/rewards.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {HttpClientModule} from '@angular/common/http';
     TimelineNodeComponent,
     TitleComponent,
     DividerComponent,
-    InterestComponent
+    InterestComponent,
+    RewardsComponent
   ],
     imports: [
         BrowserModule,
