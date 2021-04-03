@@ -22,9 +22,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
 import { DividerComponent } from './sections/divider/divider.component';
+import { InterestComponent } from './sections/interest/interest.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -43,20 +45,23 @@ import { DividerComponent } from './sections/divider/divider.component';
     TimelineDateComponent,
     TimelineNodeComponent,
     TitleComponent,
-    DividerComponent
+    DividerComponent,
+    InterestComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatGridListModule,
-    MatChipsModule,
-    MatCardModule,
-    MatListModule,
-    MatIconModule,
-    MatButtonModule,
-    FontAwesomeModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatGridListModule,
+        MatChipsModule,
+        MatCardModule,
+        MatListModule,
+        MatIconModule,
+        MatButtonModule,
+        FontAwesomeModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

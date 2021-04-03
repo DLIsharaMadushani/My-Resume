@@ -8,31 +8,54 @@
     </div>
     <div class="row row-cols-2">
       <div class="col-7">
-        <form>
+        <form (ngSubmit)="sendMessage(); contactForm.reset()" #contactForm="ngForm" >
           <div class="row form-row row-cols-2">
             <div class="form-group col-6">
               <label for="inputName">Your Name</label>
-              <input type="text" class="form-control" placeholder="Name" id="inputName">
+              <input type="text" class="form-control" placeholder="Name" id="inputName"
+                     [(ngModel)]="name" name="msgSenderName" required="required" #nameInput="ngModel"
+                    [class.help]="nameInput.invalid && nameInput.touched">
+              <div class="error" *ngIf="nameInput.invalid && nameInput.touched">
+                Your name is required
+              </div>
             </div>
             <div class="form-group col-6">
               <label for="inputEmail">Your Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email"
+                     [(ngModel)]="from" name="msgSenderEmail" #emailInput="ngModel"
+                      required="required" email="" [class.help]="emailInput.invalid && emailInput.touched">
+              <div class="error" *ngIf="emailInput.invalid && emailInput.touched">
+                Your email is required and need to be a valid email.
+              </div>
             </div>
           </div>
           <div class="row form-row row-cols-1">
             <div class=" form-group col-12">
               <label for="inputSubject">Subject</label>
-              <input type="email" class="form-control" id="inputSubject" placeholder="Subject">
+              <input type="text" class="form-control" id="inputSubject" placeholder="Subject"
+                     [(ngModel)]="subject" name="msgSubject" required="required" #subjectInput="ngModel"
+                     [class.help]="subjectInput.invalid && subjectInput.touched">
+              <div class="error" *ngIf="subjectInput.invalid && subjectInput.touched">
+                Subject can't be empty.
+              </div>
             </div>
+
           </div>
           <div class="row form-row row-cols-1">
             <div class="form-group col-12">
               <label for="textareaMessage">Messsage</label>
-              <textarea class="form-control" id="textareaMessage" rows="5"></textarea>
+              <textarea class="form-control" id="textareaMessage" rows="5"
+                        [(ngModel)]="msg" name="msgContent" required="required" #messageInput="ngModel"
+                        [class.help]="messageInput.invalid && messageInput.touched"></textarea>
+              <div class="error" *ngIf="messageInput.invalid && messageInput.touched">
+                Message can't be empty.
+              </div>
             </div>
+
           </div>
           <div class="row submit container ">
-            <button type="submit" class="btn btn-primary" id="btnSend">Send</button>
+            <button type="submit" class="btn btn-primary" id="btnSend" name="submitMessage" id="submitMessage" #submitMessage
+            [disabled]="contactForm.invalid">Send</button>
           </div>
         </form>
       </div>
@@ -40,7 +63,7 @@
         <div class="row row-cols-2 border contact-row">
           <div class="col-2 icon border"><i class="material-icons icon">place</i></div>
             <div class="col-10 contact">
-              <p> Sri Lanka</p>
+              <p>Batapola Road, Meetiyagoda, Ambalangoda, Sri Lanka</p>
             </div>
         </div>
         <div class="row row-cols-2 border contact-row">
@@ -64,4 +87,6 @@
     </div>
   </div>
 
+
 </section>
+

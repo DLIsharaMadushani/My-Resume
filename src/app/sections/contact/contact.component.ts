@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {SendMessageService} from '../../sevice/send-message.service';
+import {HttpParams} from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -12,10 +14,26 @@ export class ContactComponent implements OnInit {
     Validators.required,
     Validators.email,
   ]);
+  name: string;
+  from: string;
+  subject: string;
+  msg: string;
 
-  constructor() {
+  constructor(public messageService: SendMessageService) {
+
   }
 
   ngOnInit(): void {
+  }
+
+  sendMessage(): void {
+    const message = 'Name : ' + this.name + ' From : ' + this.from + ' Message : ' + this.msg;
+    this.messageService.sendMessage(this.subject, message).subscribe(
+      value => {
+          alert('Message sent succefully');
+        },
+      error => {
+        alert('Message sending failed. Please try again');
+      });
   }
 }

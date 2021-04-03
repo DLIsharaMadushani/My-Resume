@@ -1,27 +1,123 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,500')
+$ribbon-wrapper : #738290
+$ribbon-width : 420px
 
 .section-title
+  position: relative
   text-align: center
   justify-content: center
   align-content: center
-  margin-left: 20px
-  margin-right: 20px
+  margin-left: 40px
+  margin-right: 40px
   text-transform: uppercase
   color: white
-  background-color: #738290
-  border-top-left-radius: 30em
-  border-top-right-radius: 30em
-  border-bottom-right-radius: 30em
-  border-bottom-left-radius: 30em
-
-h1
-  padding: 10px
-  letter-spacing: 5px
-  &:hover
+  margin-bottom: 20px
 
 
+.ribbon-wrapper
+  position: relative
+  z-index: 998
 
-span
-  padding: 5px
-  border: #fffcf7 solid 2px
+.ribbon-front
+  background-color: #f28493
+  height: 50px
+  width: calc(100% + 20px)
+  position: relative
+  left: -10px
+  z-index: 2
+  font: 20px/50px bold Roboto, sans-serif
+  color: #fff
+  text-align: center
+  text-shadow: 0px 1px 2px #cc6666
 
+.ribbon-front,
+.ribbon-back-left,
+.ribbon-back-right
+  -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55)
+  -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55)
+  -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55)
+  -o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55)
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright
+  position: absolute
+  z-index: 1
+  border-style: solid
+  height: 0px
+  width: 0px
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright
+  top: 50px
+
+.ribbon-edge-topleft,
+.ribbon-edge-bottomleft
+  left: -10px
+  border-color: transparent #f28493 transparent transparent
+
+.ribbon-edge-topleft
+  top: -5px
+  border-width: 5px 10px 0 0
+
+.ribbon-edge-bottomleft
+  border-width: 0 10px 0px 0
+
+.ribbon-edge-topright,
+.ribbon-edge-bottomright
+  left: 100%
+  border-color: transparent transparent transparent #f28493
+
+.ribbon-edge-topright
+  top: 0px
+  border-width: 0px 0 0 10px
+
+.ribbon-edge-bottomright
+  border-width: 0 0 5px 10px
+
+
+
+@-webkit-keyframes flow
+  0%
+    left: -20px
+    opacity: 0
+  50%
+    left: 50%
+    opacity: 0.3
+  100%
+    left: 100%
+    opacity: 0
+
+@keyframes flow
+  0%
+    left: -20px
+    opacity: 0
+  50%
+    left: 50%
+    opacity: 0.3
+  100%
+    left: 100%
+    opacity: 0
+
+.glow
+  background: rgb(255,255,255)
+  width: 40px
+  height: 100%
+  z-index: 999
+  position: absolute
+  -webkit-animation: flow 3s linear infinite
+  -moz-animation: flow 3s linear infinite
+  -webkit-transform: skew(20deg)
+  -moz-transform: skew(20deg)
+  -o-transform: skew(20deg)
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%) /* IE10+ */
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ) /* IE6-9 */
+  border-left: 1px solid #fff
