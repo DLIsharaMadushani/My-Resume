@@ -11,6 +11,8 @@ export class WorkComponent implements OnInit {
   @Input() projectType: string;
   @Input() projectDesc: string;
   @Input() skills: string[];
+  @Input() client: string;
+  @Input() clientAddress: string;
 
   constructor() { }
 
